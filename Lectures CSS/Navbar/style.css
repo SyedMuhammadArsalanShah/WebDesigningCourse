@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+}
+
+
+
+
+div {
+
+    background-color: goldenrod;
+}
+
+.rightkardo {
+     /* for align sides */
+    float: right;
+    margin-right: 70px;
+    margin-top: 10px;
+    
+}
+
+a {
+    
+    color: white;
+    font-size: 20px;
+     margin: 10px;
+    text-decoration: none;
+}
+a:hover{
+
+background-color: white;
+color: goldenrod;
+}
