@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav {
+        background-color: teal;
+        overflow: hidden;
+    }
+
+    ul {
+        /* background-color: rgb(128, 0, 0); */
+        list-style-type: none;
+        padding-right: 50px;;
+        margin: 0;
+        float: right;
+    }
+
+
+    li {
+        float: left;
+    }
+
+
+    a {
+        display: block;
+        padding: 10px 16px;
+        color: white;
+
+        text-decoration: none;
+    }
+
+
+    a:hover:not(.active) {
+        background-color: white;
+        color: teal;
+    }
+
+    .logo {
+        float: left;
+
+    }
+
+    .active {
+        background-color:teal;
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <a class="logo" href="">Shayan Khan</a>
+
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
