@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    li {
+        display: inline;
+    }
+
+    .header {
+        background-color: black;
+        color: aliceblue;
+        height: 30px;
+        position: sticky;
+        top: 0;
+        z-index: 4;
+    }
+
+    .container {
+        background-color: teal;
+        color: white;
+        width: 50%;
+        height: 5000px;
+        margin: auto;
+        position: relative;
+        z-index: 3;
+    }
+
+    .box1 {
+        background-color: aliceblue;
+        color: teal;
+        width: 100px;
+        height: 100px;
+        /* position: static; */
+        /* position: relative; */
+        /* position: absolute; */
+        position: fixed;
+        top: 100px;
+        left: 0;
+
+
+
+    }
+</style>
+
+<body>
+    <div class="header">
+        <ul>
+            <li>Home</li>
+            <li>about</li>
+            <li>contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui quibusdam reiciendis vero?
+
+        <div class="box1">
+            here is your chat
+        </div>
+
+    </div>
+
+</body>
+
+</html>
