@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // empty array
+        var a = [];
+
+        // numbers array
+        var aos = [10, 20, 34, 18, 90, 12];
+        // strings array
+        var students = ["anas", "shayan", "farooq vayani"];
+
+        // mixed datatypes
+        var info = ["affan", 2002, 4.5, true];
+
+        // push()for add data in last   
+        var p = students.push("affan")
+        document.write(students + "<br>")
+
+        // unshift() for add data on start   
+        var u = students.unshift("ali")
+        document.write(students + "<br>")
+
+
+
+
+        // change by index
+        students[5] = "fahad mustafa"
+        document.write(students + "<br>")
+
+
+
+
+
+        // pop() for remove data from last   
+        var p = students.pop()
+        document.write(students + "<br>")
+
+        // shift() for remove data from start   
+        var u = students.shift()
+        document.write(students + "<br>")
+
+
+
+        // length for size of data
+        document.write(students.length + "<br>")//4
+
+
+
+        // length for size of data
+        //   string
+        document.write(students.sort() + "<br>");
+        //   numbers
+        document.write(aos.sort() + "<br>");
+
+
+
+
+
+
+         //    check index 
+         document.write(students.indexOf("shayan")+"<br>");//3
+
+
+
+         document.write(students.slice(3)+"<br>");
+
+
+
+
+         var newstudents=["talha","zaid","musa"]
+
+
+
+         document.write(students.concat(newstudents))
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
