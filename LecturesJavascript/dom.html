@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p id="click" onclick="far()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quia vero ipsam sequi ab quas pariatur provident mollitia, dolor molestias animi, harum aliquam? Porro quibusdam, dolores voluptatum nisi a ut!</p>
+
+<p class="click">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quia vero ipsam sequi ab quas pariatur provident mollitia, dolor molestias animi, harum aliquam? Porro quibusdam, dolores voluptatum nisi a ut!</p>
+
+
+    <script>
+    //    var a= document.getElementById('click'); 
+    //    var b= document.getElementsByClassName('click');      
+    //    var b= document.getElementsByClassName('p');
+
+       var a= document.getElementById('click').innerText="farooq";        
+       var b= document.getElementById('click').innerHTML;        
+        
+        console.log(a);
+        console.log(b);
+
+
+       function far() {
+        document.write("click successfully")
+       }
+
+
+      
+    </script>
+</body>
+</html>
