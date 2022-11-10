@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        background-color: #e0e0e0;
+        height: 50px;
+        width: 50px;
+        color: black;
+        font-size: 30;
+        border-radius: 100px;
+        margin: 2px;
+
+    }
+
+    input {
+       
+        
+        background-color: white;
+        height: 80px;
+        width: 230px;
+        color: black;
+        font-size: 100;
+        border-radius: 20px;
+    }
+
+
+
+
+
+
+    div {
+        border: 1px solid black;
+        width: 250px;
+        background-color: #0f0000;
+        text-align: center;
+        color: white ;
+
+        border-radius: 20px;
+
+
+
+
+
+
+    }
+
+    #per {
+        background-color: #0d47a1;
+        color: white;
+
+    }
+
+    #green {
+        color: white;
+    }
+</style>
+
+<body>
+
+    <div>
+
+        <h1>Calculator</h1>
+
+        <input type="text" id="scr">
+        <br>
+        <br>
+        <button onclick="document.getElementById('scr').value+='1'">1</button>
+        <button onclick="document.getElementById('scr').value+='2'">2</button>
+        <button onclick="document.getElementById('scr').value+='3'">3</button>
+        <button onclick="document.getElementById('scr').value+='-'">-</button>
+        <br>
+        <br>
+
+        <button onclick="document.getElementById('scr').value+='4'">4</button>
+        <button onclick="document.getElementById('scr').value+='5'">5</button>
+        <button onclick="document.getElementById('scr').value+='6'">6</button>
+        <button onclick="document.getElementById('scr').value+='*'">*</button>
+        <br>
+        <br>
+        <button onclick="document.getElementById('scr').value+='7'">7</button>
+        <button onclick="document.getElementById('scr').value+='8'">8</button>
+        <button onclick="document.getElementById('scr').value+='9'">9</button>
+        <button onclick="document.getElementById('scr').value+='/'">/</button>
+
+        <br>
+        <br>
+        <button onclick="document.getElementById('scr').value+='0'">0</button>
+        <button onclick="document.getElementById('scr').value=''">C</button>
+        <button onclick="document.getElementById('scr').value=eval(document.getElementById('scr').value)">=</button>
+        <button  id="green" onclick="document.getElementById('scr').value+='+'">+</button>
+
+    </div>
+
+
+
+
+
+
+  
+
+    <script>
+
+        document.getElementById("green").style.backgroundColor="green"  ; 
+        document.getElementById("green").style.height="80px";  </script>
+
+
+    </script>
+</body>
+
+</html>
