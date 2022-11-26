@@ -60,16 +60,16 @@
 
         <form>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Task Name</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="title" class="form-label">Task Name</label>
+                <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" rows="3"></textarea>
             </div>
             <div class="d-grid gap-2">
-                <button class="btn btn-success" type="button"> Add to list</button>
+                <button id="add" class="btn btn-success" type="button"> Add to list</button>
                 <button class="btn btn-danger" type="button">Clear All</button>
             </div>
         </form>
@@ -77,7 +77,7 @@
     <div class="container mt-4">
 
 
-        <table class="table table-striped table-hover mytable" >
+        <table class="table table-striped table-hover mytable">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -86,31 +86,96 @@
                     <th scope="col">Option</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tableBody">
                 <tr>
                     <th scope="row">1</th>
                     <td>Mark</td>
                     <td>Otto</td>
                     <td>@mdo</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
+
 
             </tbody>
         </table>
     </div>
 
-  
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
 
-   
+
+    <script>
+        function getAndUpdate() {
+            console.log("list submit horahi hai");
+            // fetch values from input tag
+
+            tit = document.getElementById('title').value
+            des = document.getElementById('description').value
+
+
+            // store data in local storage
+            if (localStorage.getItem('itemsJson') == null) {
+                itemJsonArray = [];
+                itemJsonArray.push([tit, des])
+                localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+
+            } else {
+                itemJsonArrayStr = localStorage.getItem('itemsJson');
+                itemJsonArray = JSON.parse(itemJsonArrayStr)
+                itemJsonArray.push([tit, des])
+                localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+
+
+
+
+            }
+
+            update();
+
+        }
+
+        function update() {
+
+
+
+            if (localStorage.getItem('itemsJson') == null) {
+                itemJsonArray = [];
+
+                localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+
+            } else {
+                itemJsonArrayStr = localStorage.getItem('itemsJson');
+                itemJsonArray = JSON.parse(itemJsonArrayStr)
+            }
+
+            // data values save in table 
+            let tableBody = document.getElementById("tableBody");
+            let str = "";
+            itemJsonArray.forEach((element,index) => {
+
+                str += `
+             <tr>
+                    <th scope="row">${index +1}</th>
+                    <td>${element[0]}</td>
+                    <td>${element[1]}</td>
+                    <td><button class="btn btn-danger" type="button">Delete</button></td>
+             </tr>
+             `
+
+            });
+
+           tableBody.innerHTML=str;
+        }
+
+        
+        add = document.getElementById("add");
+        add.addEventListener("click", getAndUpdate);
+        update()
+
+
+    </script>
 
 </body>
 
